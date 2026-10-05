@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#100506">
+<title>Somewhere Between Then & Now</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="is-locked">
+  <div class="entrance-overlay" id="entranceModal">
+    <div class="entrance-light" aria-hidden="true"></div>
+    <div class="entrance-content">
+      <p class="eyebrow">AN ARCHIVE OF US</p>
+      <h1>Somewhere between<br><em>then and now.</em></h1>
+      <p class="entrance-sub">Some memories are worth keeping.</p>
+      <button class="gold-button" id="enterSiteBtn" type="button">ENTER OUR STORY</button>
+      <p class="micro-note">tap to begin · sound available</p>
+    </div>
+  </div>
+
+  <audio id="bgm" loop preload="auto">
+    <source src="assets/audio/bgm.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="controller-photo-slots" aria-hidden="true">
+    <img src="assets/images/cover.jpg" alt="Main Hero Poster">
+    <img src="assets/images/mem_1.jpg" alt="Memory Polaroid 1">
+    <img src="assets/images/mem_2.jpg" alt="Memory Polaroid 2">
+    <img src="assets/images/mem_3.jpg" alt="Memory Polaroid 3">
+    <img src="assets/images/mem_4.jpg" alt="Memory Polaroid 4">
+    <img src="assets/images/mem_5.jpg" alt="Memory Polaroid 5">
+    <img src="assets/images/mem_6.jpg" alt="Memory Polaroid 6">
+    <img src="assets/images/mem_7.jpg" alt="Memory Polaroid 7">
+    <img src="assets/images/mem_8.jpg" alt="Memory Polaroid 8">
+    <img src="assets/images/mem_9.jpg" alt="Memory Polaroid 9">
+    <img src="assets/images/mem_10.jpg" alt="Memory Polaroid 10">
+    <img src="assets/images/mem_11.jpg" alt="Memory Polaroid 11">
+    <img src="assets/images/mem_12.jpg" alt="Memory Polaroid 12">
+    <img src="assets/images/mem_13.jpg" alt="Memory Polaroid 13">
+    <img src="assets/images/mem_14.jpg" alt="Memory Polaroid 14">
+  </div>
+
+  <button class="music-control" id="musicToggle" type="button" aria-label="Toggle background music" aria-pressed="false">
+    <span class="music-dot"></span><span id="musicLabel">MUSIC OFF</span>
+  </button>
+
+  <main id="mainApp" class="site" aria-hidden="true">
+    <div class="news-ticker"><div>STILL US · SAME SKY · DIFFERENT CHAPTERS · SOMEWHERE IN TIME · STILL US ·</div></div>
+
+    <section class="opening section" id="opening">
+      <div class="section-inner opening-inner">
+        <div class="opening-copy">
+          <p class="eyebrow">01 / OUR ARCHIVE</p>
+          <h2>Somewhere between<br><span class="script-accent">then and now.</span></h2>
+          <p>Let the photographs turn. Drag the circle and choose a memory.</p>
+        </div>
+        <div class="orbit-stage" id="orbitStage" aria-label="Rotating memory carousel">
+          <div class="orbit-haze"></div>
+          <div class="orbit-center">
+            <p class="eyebrow">TERBUANG DALAM WAKTU</p>
+            <strong id="orbitCounter">01 / 15</strong>
+            <span>choose a memory</span>
+          </div>
+          <div class="orbit-track" id="orbitTrack"></div>
+        </div>
+        <div class="opening-footer">
+          <span><b id="selectedNumber">01</b> · <span id="selectedLabel">FIRST DAY</span></span>
+          <button class="outline-button" id="selectedOpen" type="button">OPEN MEMORY</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero section" id="hero">
+      <div class="hero-media">
+        <img src="assets/images/cover.jpg" alt="A quiet anniversary memory" class="hero-image">
+        <div class="hero-vignette"></div>
+        <div class="hero-copy">
+          <p class="eyebrow">02 / A LITTLE ARCHIVE OF US</p>
+          <h2>We were<br><span class="script-accent">here.</span></h2>
+          <p>For <span id="recipientDisplay">My Love</span></p>
+          <p class="date-line"><span id="dateDisplay">14 February 2026</span> · STILL HERE · ALWAYS YOU</p>
+        </div>
+        <span class="scroll-cue">KEEP SCROLLING · ↓</span>
+      </div>
+    </section>
+
+    <section class="letter-section section" id="letterSection">
+      <div class="section-inner letter-layout">
+        <div class="letter-intro">
+          <p class="eyebrow">03 / A LETTER</p>
+          <h2>A letter I never<br><span class="script-accent">want to lose.</span></h2>
+          <p>Some things feel better when they are written slowly — folded, sealed, and opened when the moment feels right.</p>
+        </div>
+        <div class="envelope-scene">
+          <button class="envelope" id="envelopeTrigger" type="button" aria-label="Open the letter">
+            <span class="envelope-back"></span>
+            <span class="envelope-paper-preview" aria-hidden="true"></span>
+            <span class="envelope-pocket"></span>
+            <span class="envelope-flap"></span>
+            <span class="wax-seal">M</span>
+            <span class="envelope-label">OPEN THE LETTER</span>
+          </button>
+          <p class="tap-note">tap the seal to open</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="memories section" id="memories">
+      <div class="section-inner">
+        <div class="section-heading centered">
+          <p class="eyebrow">04 / THE THINGS I REMEMBER</p>
+          <h2>Little pieces<br><span class="script-accent">that stayed.</span></h2>
+          <p>Not every memory needs a grand story. Some just need to be remembered.</p>
+        </div>
+        <div class="memory-grid" id="memoryGrid"></div>
+      </div>
+    </section>
+
+    <section class="game-section section" id="game">
+      <div class="section-inner">
+        <div class="section-heading centered">
+          <p class="eyebrow">05 / MINI GAME</p>
+          <h2>Play with<br><span class="script-accent">our memories.</span></h2>
+          <p>Two little games. Pick one, then see how many memories you can keep.</p>
+        </div>
+        <div class="game-tabs" role="tablist" aria-label="Memory games">
+          <button class="game-tab active" data-mode="catch" type="button">CATCH THE MEMORIES</button>
+          <button class="game-tab" data-mode="match" type="button">MATCH THE MEMORIES</button>
+        </div>
+        <div class="game-shell">
+          <div class="game-topbar"><span id="gameName">CATCH THE MEMORIES</span><span>SCORE <b id="gameScore">0</b> · TIME <b id="gameTime">30</b></span></div>
+          <div class="game-board" id="gameBoard">
+            <div class="game-start" id="gameStart">
+              <p class="eyebrow">READY?</p>
+              <h3 id="gameStartTitle">Catch as many memories as you can.</h3>
+              <p id="gameStartDesc">Tap the floating photographs before the timer runs out.</p>
+              <button class="gold-button" id="startGame" type="button">START GAME</button>
+            </div>
+            <div class="catch-layer" id="catchLayer" aria-hidden="true"></div>
+            <div class="match-layer" id="matchLayer" aria-hidden="true"></div>
+            <div class="game-end" id="gameEnd" aria-hidden="true">
+              <p class="eyebrow">TIME'S UP</p>
+              <h3>YOU FOUND <span id="finalScore">0</span> MEMORIES</h3>
+              <p id="gameEndText">The memories were quick, but you caught a few.</p>
+              <button class="outline-button" id="restartGame" type="button">PLAY AGAIN</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final section" id="final">
+      <div class="final-media">
+        <img src="assets/images/mem_14.jpg" alt="The final memory" class="final-image">
+        <div class="final-vignette"></div>
+        <div class="final-copy">
+          <p class="eyebrow">06 / ONE MORE WISH</p>
+          <h2>One more<br><span class="script-accent">chapter.</span></h2>
+          <p id="finalText">Thank you for being part of the time I never want to forget. Here’s to everything we have lived, and everything still waiting for us.</p>
+          <p class="final-anniversary">Happy Anniversary, <span id="finalRecipient">My Love</span>.</p>
+          <p class="final-sign">— <span id="finalSender">Your Person</span></p>
+        </div>
+      </div>
+      <footer class="site-footer">made by memou</footer>
+    </section>
+  </main>
+
+  <div class="modal" id="letterModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-letter></div>
+    <div class="letter-paper" role="dialog" aria-modal="true" aria-label="Love letter">
+      <button class="modal-close" id="closeLetter" type="button" aria-label="Close letter">×</button>
+      <div class="paper-border">
+        <p class="letter-dear">Dear <span id="letterRecipient">My Love</span>,</p>
+        <p id="letterText">Thank you for being part of every little moment.</p>
+        <p class="letter-sign">— <span id="senderDisplay">Your Person</span></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="memoryDetail" aria-hidden="true">
+    <div class="modal-backdrop" data-close-memory></div>
+    <div class="memory-detail" role="dialog" aria-modal="true" aria-label="Memory detail">
+      <button class="modal-close" id="closeMemory" type="button" aria-label="Close memory">×</button>
+      <img id="detailImage" src="assets/images/mem_1.jpg" alt="Memory Polaroid 1">
+      <div class="memory-detail-copy">
+        <p class="eyebrow" id="detailNumber">01</p>
+        <h3 id="detailTitle">First Day</h3>
+        <p id="detailQuote">The beginning did not look like a beginning. It simply felt right.</p>
+        <button class="outline-button" id="closeMemoryBtn" type="button">BACK TO MEMORIES</button>
+      </div>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
