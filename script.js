@@ -1,21 +1,48 @@
 const DELUXE_CONFIG = {
-  girlfriendName: "My Love",
-  nickname: "Love",
-  boyfriendName: "Your Person",
-  anniversaryDate: "14 February 2026",
-  signOffName: "Your Person",
-  loveLetter: "Thank you for being part of every little moment. For the quiet days, the loud laughs, the little jokes, and every ordinary second that somehow became a memory. I would choose all of it again.",
-  finalMessage: "Thank you for being part of the time I never want to forget. Here’s to everything we have lived, and everything still waiting for us.",
-  castDialogues: [
-    {title:"First Day",quote:"The beginning did not look like a beginning. It simply felt right."},
-    {title:"The Laugh",quote:"Some laughs stay in your head long after the room becomes quiet."},
-    {title:"Rain",quote:"Even the ordinary weather became part of our story."},
-    {title:"Late Night",quote:"We talked until the clock stopped feeling important."},
-    {title:"Home",quote:"Somewhere along the way, being together started to feel like home."},
-    {title:"Yesterday",quote:"The past is softer when it has your face in it."},
-    {title:"Little Things",quote:"The tiny things were never tiny to me."},
-    {title:"Still Here",quote:"Different chapter, same feeling: I am still grateful for you."},
-    {title:"Us",quote:"If time keeps moving, I hope we keep making memories worth keeping."}
+  "girlfriendName": "My Love",
+  "nickname": "Love",
+  "boyfriendName": "Your Person",
+  "anniversaryDate": "14 February 2026",
+  "signOffName": "Your Person",
+  "loveLetter": "Thank you for being part of every little moment. For the quiet days, the loud laughs, the little jokes, and every ordinary second that somehow became a memory. I would choose all of it again.",
+  "finalMessage": "Thank you for being part of the time I never want to forget. Here’s to everything we have lived, and everything still waiting for us.",
+  "castDialogues": [
+    {
+      "title": "First Day",
+      "quote": "The beginning did not look like a beginning. It simply felt right."
+    },
+    {
+      "title": "The Laugh",
+      "quote": "Some laughs stay in your head long after the room becomes quiet."
+    },
+    {
+      "title": "Rain",
+      "quote": "Even the ordinary weather became part of our story."
+    },
+    {
+      "title": "Late Night",
+      "quote": "We talked until the clock stopped feeling important."
+    },
+    {
+      "title": "Home",
+      "quote": "Somewhere along the way, being together started to feel like home."
+    },
+    {
+      "title": "Yesterday",
+      "quote": "The past is softer when it has your face in it."
+    },
+    {
+      "title": "Little Things",
+      "quote": "The tiny things were never tiny to me."
+    },
+    {
+      "title": "Still Here",
+      "quote": "Different chapter, same feeling: I am still grateful for you."
+    },
+    {
+      "title": "Us",
+      "quote": "If time keeps moving, I hope we keep making memories worth keeping."
+    }
   ]
 };
 
